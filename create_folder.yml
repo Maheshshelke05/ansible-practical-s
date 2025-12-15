@@ -1,0 +1,9 @@
+---
+- name: create a folder inside /home/ec2-user/awscli
+  hosts: localhost
+  tasks:
+    - name: create a folder 
+      ansible.builtin.file:
+      path: /home/ec2-user/awscli
+      state: directory
+      mode: '0700'
